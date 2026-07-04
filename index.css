@@ -1,32 +1,32 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
-    background: red;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-.container{
-    width: 900px;
-    max-width: 100%;
-    min-height: 550px;
+.container {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
     background: #ffffff;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
 /* PANEL IZQUIERDO */
-.left-panel{
+.left-panel {
     width: 50%;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
@@ -38,51 +38,53 @@ body{
     text-align: center;
 }
 
-.left-panel h1{
+.left-panel h1 {
     font-size: 42px;
     margin-bottom: 20px;
 }
 
-.left-panel p{
+.left-panel p {
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 320px;
+    font-size: 16px;
 }
 
-.left-panel img{
+.left-panel img {
     width: 220px;
     max-width: 100%;
     animation: float 3s ease-in-out infinite;
 }
 
 /* ANIMACIÓN */
-@keyframes float{
-    0%{
+@keyframes float {
+    0% {
         transform: translateY(0px);
     }
-    50%{
+    50% {
         transform: translateY(-15px);
     }
-    100%{
+    100% {
         transform: translateY(0px);
     }
 }
 
 /* PANEL DERECHO */
-.right-panel{
+.right-panel {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
+    background: #fff;
 }
 
-.login-form{
+.login-form {
     width: 100%;
     max-width: 360px;
 }
 
-.login-form h2{
+.login-form h2 {
     text-align: center;
     margin-bottom: 35px;
     color: #333;
@@ -90,12 +92,12 @@ body{
 }
 
 /* INPUTS */
-.input-box{
+.input-box {
     position: relative;
     margin-bottom: 20px;
 }
 
-.input-box i{
+.input-box i {
     position: absolute;
     top: 50%;
     left: 15px;
@@ -104,7 +106,7 @@ body{
     font-size: 15px;
 }
 
-.input-box input{
+.input-box input {
     width: 100%;
     padding: 15px 15px 15px 45px;
     border: 1px solid #ccc;
@@ -115,13 +117,13 @@ body{
     background: #fff;
 }
 
-.input-box input:focus{
+.input-box input:focus {
     border-color: #6a11cb;
-    box-shadow: 0 0 8px rgba(106,17,203,0.25);
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.25);
 }
 
 /* OPCIONES */
-.options{
+.options {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,7 +133,7 @@ body{
     flex-wrap: wrap;
 }
 
-.remember-me{
+.remember-me {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -139,22 +141,22 @@ body{
     cursor: pointer;
 }
 
-.remember-me input{
+.remember-me input {
     cursor: pointer;
 }
 
-.options a{
+.options a {
     text-decoration: none;
     color: #6a11cb;
     transition: 0.3s;
 }
 
-.options a:hover{
+.options a:hover {
     text-decoration: underline;
 }
 
 /* BOTÓN */
-button{
+button {
     width: 100%;
     padding: 15px;
     border: none;
@@ -167,34 +169,34 @@ button{
     transition: 0.3s ease;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.02);
     opacity: 0.95;
 }
 
-button:active{
+button:active {
     transform: scale(0.99);
 }
 
 /* LOGIN SOCIAL */
-.social-login{
+.social-login {
     text-align: center;
     margin-top: 30px;
 }
 
-.social-login p{
+.social-login p {
     margin-bottom: 15px;
     color: #666;
     font-size: 14px;
 }
 
-.social-icons{
+.social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-.social-icons a{
+.social-icons a {
     width: 45px;
     height: 45px;
     background: #f1f1f1;
@@ -208,85 +210,89 @@ button:active{
     transition: 0.3s ease;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     background: #6a11cb;
     color: white;
     transform: translateY(-5px);
 }
 
 /* REGISTRO */
-.register{
+.register {
     text-align: center;
     margin-top: 25px;
     font-size: 14px;
     color: #444;
 }
 
-.register a{
+.register a {
     text-decoration: none;
     color: #2575fc;
     font-weight: bold;
 }
 
-.register a:hover{
+.register a:hover {
     text-decoration: underline;
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px){
-    body{
-        padding: 15px;
-    }
-
-    .container{
-        width: 100%;
+@media (max-width: 900px) {
+    .container {
         flex-direction: column;
+        max-width: 500px;
         min-height: auto;
     }
 
     .left-panel,
-    .right-panel{
+    .right-panel {
         width: 100%;
     }
 
-    .left-panel{
-        padding: 30px 20px;
+    .left-panel {
+        padding: 35px 25px;
     }
 
-    .left-panel h1{
+    .left-panel h1 {
         font-size: 32px;
     }
 
-    .left-panel p{
+    .left-panel p {
         font-size: 14px;
     }
 
-    .left-panel img{
-        width: 160px;
+    .left-panel img {
+        width: 170px;
     }
 
-    .right-panel{
-        padding: 30px 20px;
+    .right-panel {
+        padding: 30px 25px;
     }
 
-    .login-form h2{
+    .login-form h2 {
         font-size: 28px;
         margin-bottom: 25px;
     }
 }
 
-@media (max-width: 480px){
-    .options{
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        border-radius: 15px;
+    }
+
+    .options {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .input-box input{
+    .input-box input {
         font-size: 14px;
         padding: 14px 14px 14px 42px;
     }
 
-    button{
+    button {
         padding: 14px;
     }
 }
